@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="RandomIsAwful.fs" />
+    <!--Compile Include="RandomIsAwful.fs" /-->
+    <Compile Include="BetterRandom.fs" />
+    <Compile Include="Pseudorandom.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

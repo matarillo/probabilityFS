@@ -5,7 +5,7 @@ open System
 [<EntryPoint>]
 let main argv =
     printfn "Probability"
-    RandomIsAwful.doIt ()
+    // RandomIsAwful.doIt ()
     printfn "Press Enter to finish"
     Console.ReadLine () |> ignore
     0
