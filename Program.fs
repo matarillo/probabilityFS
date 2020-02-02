@@ -6,6 +6,7 @@ open System
 let main argv =
     printfn "Probability"
     // RandomIsAwful.doIt ()
+    Episode03.doIt ()
     printfn "Press Enter to finish"
     Console.ReadLine () |> ignore
     0

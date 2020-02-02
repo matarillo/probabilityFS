@@ -9,6 +9,8 @@
     <!--Compile Include="RandomIsAwful.fs" /-->
     <Compile Include="BetterRandom.fs" />
     <Compile Include="Pseudorandom.fs" />
+    <Compile Include="Distribution.fs" />
+    <Compile Include="Episode03.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
