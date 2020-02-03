@@ -10,7 +10,8 @@
     <Compile Include="BetterRandom.fs" />
     <Compile Include="Pseudorandom.fs" />
     <Compile Include="Distribution.fs" />
-    <Compile Include="Episode03.fs" />
+    <!--Compile Include="Episode03.fs" /-->
+    <Compile Include="Episode04.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
