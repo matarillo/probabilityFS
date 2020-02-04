@@ -8,5 +8,6 @@ let private prng =
 
 let nextInt () =
     prng.Value.Next ()
+
 let nextDouble () =
     prng.Value.NextDouble ()

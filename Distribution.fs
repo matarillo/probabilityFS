@@ -1,24 +1,11 @@
 module Distribution
 
-type Distribution<'T> (sample) =
-    member _.Sample : unit -> 'T = sample
+open Probability
 
-type DiscreteDistribution<'T> (sample, support, weight) =
-    member _.Sample : unit -> 'T = sample
-    member _.Support : unit -> 'T list = support
-    member _.Weight : 'T -> int = weight
-
-// Standard Continuous Uniform Distribution
-let scu = Distribution<_> Pseudorandom.nextDouble
+let scu = StandardContinuousUniform.distribution
 
 // Normal Distribution by Box-Muller Transform
-let normal mean sigma =
-    let standardSample () =
-        let r = -2.0 * log (scu.Sample())
-        let theta = 2.0 * System.Math.PI * scu.Sample()
-        sqrt r * cos theta
-    let sample () = mean + sigma * (standardSample ())
-    Distribution<_> sample
+let normal = Normal.distribution
 
 let notmalStandard = normal 0.0 1.0
 
@@ -71,10 +58,6 @@ let showWeights (d : DiscreteDistribution<'T>) =
     let lines = support |> Seq.map (fun f -> sprintf "%s:%d" (toLabel f) (d.Weight f))
     System.String.Join(System.Environment.NewLine, lines)
 
-// Standard Discrete Uniform
-let sdu min max =
-    if (min > max) then System.ArgumentException() |> raise
-    let support () = [ min .. max ]
-    let weight i = if min <= i && i <= max then 1 else 0
-    let sample () = int (scu.Sample() * float (1 + max - min)) + min
-    DiscreteDistribution<_>(sample, support, weight)
+let sdu = StandardDiscreteUniform.distribution
+
+let bernoulli = Bernoulli.distribution

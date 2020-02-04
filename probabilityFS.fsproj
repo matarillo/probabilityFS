@@ -6,12 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Extensions.fs" />
     <!--Compile Include="RandomIsAwful.fs" /-->
     <Compile Include="BetterRandom.fs" />
     <Compile Include="Pseudorandom.fs" />
+    <Compile Include="Probability.fs" />
+    <Compile Include="StandardContinuousUniform.fs" />
+    <Compile Include="Normal.fs" />
+    <Compile Include="StandardDiscreteUniform.fs" />
+    <Compile Include="Singleton.fs" />
+    <Compile Include="Bernoulli.fs" />
+
     <Compile Include="Distribution.fs" />
-    <!--Compile Include="Episode03.fs" /-->
+    <Compile Include="Episode03.fs" />
     <Compile Include="Episode04.fs" />
+    <Compile Include="Episode05.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
