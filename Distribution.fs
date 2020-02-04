@@ -9,10 +9,10 @@ let normal = Normal.distribution
 
 let notmalStandard = normal 0.0 1.0
 
-let samples<'T> (d : unit -> 'T) =
+let samples<'T> (d : Distribution<'T>) =
     seq {
         while true do
-            yield d ()
+            yield d.Sample()
     }
 
 let histogram (low : float) (high : float) (d : float seq) =
@@ -61,3 +61,9 @@ let showWeights (d : DiscreteDistribution<'T>) =
 let sdu = StandardDiscreteUniform.distribution
 
 let bernoulli = Bernoulli.distribution
+
+let map = Projected.distribution
+
+let toUniform (items : 'T seq) : DiscreteDistribution<'T> =
+    let array = Seq.toArray items
+    map (fun i -> array.[i]) (sdu 0 (Array.length array - 1))

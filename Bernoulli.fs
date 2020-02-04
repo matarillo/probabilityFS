@@ -13,13 +13,13 @@ let distribution zero one =
     else
         let gcd = Extensions.gcd zero one
         let (zero, one) = (zero / gcd, one / gcd)
-        let sample () =
+        let fSample () =
             let p = float zero / float (zero + one)
-            if scu.Sample() <= p then 0 else 1
-        let support () = [0; 1]
-        let weight i =
+            if sample scu <= p then 0 else 1
+        let fSupport () = [0; 1]
+        let fWeight i =
             match i with
             | 0 -> zero
             | 1 -> one
             | _ -> 0
-        DiscreteDistribution<_>(sample, support, weight)
+        DiscreteDistribution<_>(fSample, fSupport, fWeight)
