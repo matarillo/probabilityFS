@@ -17,12 +17,14 @@
     <Compile Include="Singleton.fs" />
     <Compile Include="Bernoulli.fs" />
     <Compile Include="Projected.fs" />
+    <Compile Include="WeightedInteger.fs" />
 
     <Compile Include="Distribution.fs" />
     <Compile Include="Episode03.fs" />
     <Compile Include="Episode04.fs" />
     <Compile Include="Episode05.fs" />
     <Compile Include="Episode06.fs" />
+    <Compile Include="Episode07.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
