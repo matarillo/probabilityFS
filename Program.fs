@@ -10,7 +10,8 @@ let main argv =
     // Episode04.doIt ()
     // Episode05.doIt ()
     // Episode06.doIt ()
-    Episode07.doIt ()
+    // Episode07.doIt ()
+    Episode09.doIt ()
     printfn "Press Enter to finish"
     Console.ReadLine () |> ignore
     0

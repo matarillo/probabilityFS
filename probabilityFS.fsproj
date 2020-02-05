@@ -25,6 +25,7 @@
     <Compile Include="Episode05.fs" />
     <Compile Include="Episode06.fs" />
     <Compile Include="Episode07.fs" />
+    <Compile Include="Episode09.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
