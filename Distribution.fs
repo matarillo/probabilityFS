@@ -9,11 +9,7 @@ let normal = Normal.distribution
 
 let notmalStandard = normal 0.0 1.0
 
-let samples<'T> (d : Distribution<'T>) =
-    seq {
-        while true do
-            yield d.Sample()
-    }
+let samples = Probability.samples
 
 let histogram (low : float) (high : float) (d : float seq) =
     let width = 40
@@ -64,6 +60,10 @@ let bernoulli = Bernoulli.distribution
 
 let map = Projected.distribution
 
-let toUniform (items : 'T seq) : DiscreteDistribution<'T> =
+let toUniform items =
     let array = Seq.toArray items
     map (fun i -> array.[i]) (sdu 0 (Array.length array - 1))
+
+let weighted = WeightedInteger.distribution
+
+let filter = Conditioned.distribution

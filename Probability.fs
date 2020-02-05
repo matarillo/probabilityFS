@@ -10,6 +10,8 @@ type DiscreteDistribution<'T> (sample, support, weight) =
 
 let sample (distribution : Distribution<_>) = distribution.Sample()
 
-let weight (distribution : DiscreteDistribution<_>) = distribution.Weight()
+let samples (distribution : Distribution<_>) = seq { while true do yield distribution.Sample() }
+
+let weight t (distribution : DiscreteDistribution<_>) = distribution.Weight(t)
 
 let support (distribution : DiscreteDistribution<_>) = distribution.Support()

@@ -18,6 +18,7 @@
     <Compile Include="Bernoulli.fs" />
     <Compile Include="Projected.fs" />
     <Compile Include="WeightedInteger.fs" />
+    <Compile Include="Conditioned.fs" />
 
     <Compile Include="Distribution.fs" />
     <Compile Include="Episode03.fs" />
@@ -26,6 +27,7 @@
     <Compile Include="Episode06.fs" />
     <Compile Include="Episode07.fs" />
     <Compile Include="Episode09.fs" />
+    <Compile Include="Episode10.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
